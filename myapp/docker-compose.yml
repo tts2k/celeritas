@@ -1,10 +1,14 @@
 version: '3'
 
+volumes:
+  postgres:
+  mariadb:
+  redis:
 services:
 
 #  start Postgres, and ensure that data is stored to a mounted volume
   postgres:
-    image: 'docker.io/postgres:13.4'
+    image: 'postgres:13.4'
     ports:
       - "5432:5432"
     restart: always
@@ -17,7 +21,7 @@ services:
 
   #  start Redis, and ensure that data is stored to a mounted volume
   redis:
-    image: 'docker.io/redis:alpine'
+    image: 'redis:alpine'
     ports:
       - "6379:6379"
     restart: always
@@ -26,7 +30,7 @@ services:
 
   #  start MariaDB, and ensure that data is stored to a mounted volume
   mariadb:
-    image: 'docker.io/mariadb:10.6'
+    image: 'mariadb:10.6'
     ports:
       - "3306:3306"
     restart: always

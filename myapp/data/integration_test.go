@@ -254,5 +254,5 @@ func TestToken_GenerateToken(t *testing.T) {
 }
 
 func TestToken_Insert(t *testing.T) {
-
+	
 }

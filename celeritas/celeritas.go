@@ -29,7 +29,7 @@ type Celeritas struct {
 	Routes   *chi.Mux
 	Render   *render.Render
 	JetViews *jet.Set
-	Session  *scs.Session
+	Session  *scs.SessionManager
 	DB       Database
 	config   config
 }
